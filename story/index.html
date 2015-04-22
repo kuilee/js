@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="en-US"> 
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="author" content="http://www.manman520.com" />
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link rel="icon" href="/cml.ico" type="image/x-icon" />
+	<link href="default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="garden_dev.js"></script>
+    <script type="text/javascript" src="functions_dev.js"></script>
+</head>
+
+<body>
+<audio autoplay="autopaly">
+  <source src="http://manman.qiniudn.com/gotta_have_you.mp3" type="audio/mp3" />
+</audio>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code" style="margin-top: 60px;">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* I am a programmer,</span><br />
+				<span class="space"/><span class="comments">* so I write some code to you.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Lucky"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"ManMan"</span>);<br />
+				<span class="comments">// Mar 12, 2014, I told you I love you. </span><br />
+				i.love(u);<br />
+				<span class="comments">// Luckily, you accepted and became my girlfriend.</span><br />
+				u.accepted();<br />
+				<span class="comments">// Since then, I miss u every day.</span><br />
+				i.miss(u);<br />
+				<span class="comments">// And take care of u and our love.</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// You said four years later we got married.</span><br />
+				<span class="keyword">int</span> year = <span class="keyword">4</span>;<br />
+				<span class="keyword">while</span> (year > 0) {<br />
+				<span class="placeholder"/>i.love(u);<br />
+				<span class="placeholder"/>i.takeCareOf(u);<br />
+				<span class="placeholder"/>i.waitFor(u);<br />
+				<span class="placeholder"/><span class="comments">// If I make you unhappy or behaved badly.</span><br />
+				<span class="placeholder"/><span class="keyword">if</span> (u.unhappy) {<br />
+				<span class="placeholder"/><span class="placeholder"/>year = year + 1;<br />
+				<span class="placeholder"/>}<br />
+				<span class="placeholder"/><span class="comments">// and If I perform well or you happy.</span><br />
+				<span class="placeholder"/><span class="keyword">if</span> (u.happy) {<br />
+				<span class="placeholder"/><span class="placeholder"/>year = year - 1;<br />
+				<span class="placeholder"/>}<br />
+				<span class="placeholder"/><span class="comments">// After over a year.</span><br />
+				<span class="placeholder"/>year = year - 1;<br />
+				}<br />
+				<span class="comments">// After a romantic wedding, we will live happily ever after.</span><br />
+				i.marry(u);<br />
+				Children PaoPao = <span class="keyword">new</span> Children(i,u);<br />
+				i.liveHappilyWith(u,PaoPao);<br /><br />
+				<span style="margin-left: 200px">-- your Lucky <br />
+				<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						ManMan, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Lucky</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Copyright © 2014 <a href='#'>by Lucky</a> 2014-Forever
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+			timeElapse();
+			setInterval(function () {
+				timeElapse();
+			}, 1000);
+			$("#code").typewriter();
+		}
+	</script>
+
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa5f5b8ad2e4b67edc9b61d9eec9522e2' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+
+</body>
+</html>
